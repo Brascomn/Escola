@@ -12,12 +12,32 @@ include'database.php';
     <title>Bem Vindo ao Sistema de Gerenciamento Escolar</title>
 </head>
 
-<body >
-    <img src="css/img/b1.jpg" class="imagem">
+<body class="back">
+    <img src="css/img/b1.jpg" class="imagem" style="width: 800px;">
     <div class="login-form">
 
         <h1 class="heading"> Admin Login</h1>
         <div class="login">
+        
+        <?php
+
+        if (isset($_POST["login"])) {
+           $sql = "SELECT * FROM admin WHERE ANAME='{$_POST["aname"]}' and APASS = 
+           '{$_POST["apass"]}'";
+           $res = $db->query($sql);
+           if ($res->num_rows>0) {
+            $ro=$res->fetch_assoc();
+
+            $_SESSION["AID"] = $ro["AID"];
+            $_SESSION["ANAME"] = $ro["ANAME"];
+
+            echo "<script>window.open('adminhome.php','_self');</script>";
+           } else{
+            echo "<div class='error'>Nome Inválida ou Senha Inválida </div>";
+           }
+        }
+
+        ?>
             <div class="log">
                 <form action="" method="post">
                     <label for="">Nome</label>
@@ -31,7 +51,7 @@ include'database.php';
     </div>
     <div class="footer">
         <footer>
-            <p>Copy Right &copy;  Sistema de Gerenciamento Escolar</p>
+            <p>Copy Right &copy;  Sistema de Gestão Escolar</p>
         </footer>
     </div>
 </body>
