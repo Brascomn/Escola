@@ -92,7 +92,8 @@ footer p{
 #content{
     margin-top: 30px;
     height: auto;
-    width: 950px;
+    width: auto;
+    /*width é 950px */
     position: left;
 }
 .imgs{

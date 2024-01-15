@@ -1,6 +1,7 @@
 <?php 
 
 include'database.php';
+session_start();
 
 ?>
 <!DOCTYPE html>
@@ -18,7 +19,7 @@ include'database.php';
         <?php include "sidebar.php"?>
         <div id="content">
             <h3>SEJA BEM-VINDO!</h3></br>
-            <h3>IONFORMAÇÃO DA ESCOLA</h3></br>
+            <h3>INFORMAÇÃO DA ESCOLA</h3></br>
             <img src="css/img/home.jpg" alt="" class="imgs">
             <p class=""> O SISTEMA DE GESTÃO ESCOLAR É UMA SISTEMA DE GERENCIAMENTO DE SOFTWARE AUTONOMO E QUE REALIZA DIVERSAS OPERAÇÕES DAS CLASSES, EVENTOS DE MAPEAMENTO DE EXAME. <p class="para"> </p> ESTE SISTEMA ESCOLAR TEM O PODER DE COMUNICAR COM OS PARENTES, PROOFESSOES  ESTUDANTES EM UMA PLATAFORMA INTERATIVA. ISTO É UM JORNAL AUTORMATICO PARA OS DIAS DE HOJE NAS ESCOLAS MORDERNAS
                 O SISTEMA DE GERENCIAMENTO VEM PARA FACILITAR E CUIDADR DE TODAS AS ATIVIDADES DIARIAS DA ESCOLA </p>
