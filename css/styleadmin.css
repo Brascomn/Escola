@@ -122,3 +122,11 @@ footer p{
 .error{
      
 }
+.li{
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: white;
+    border: 1px solid #  ;
+}
