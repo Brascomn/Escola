@@ -1,9 +1,9 @@
 <div class="sidebar">
-    <h3 class="text">DASHBOARD</h3> <br><hr><br>
+    <h3 class="text">DASHBOARD</h3><br><hr><br>
 
     <ul class="side"> <?php
     if(isset($_SESSION["AID"])){
-        Echo '
+        echo '
         <li class="li"><a href="adminhome.php"> Informação Escolar</a></li>
         <li class="li"><a href="addclass.php"> Informação de Classes </a></li>
         <li class="li"><a href="addsub.php"> Informção </a></li>

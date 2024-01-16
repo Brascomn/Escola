@@ -1,6 +1,7 @@
 <?php 
 
-include'database.php';
+include "database.php";
+session_start();
 
 
 ?>
@@ -14,6 +15,7 @@ include'database.php';
 </head>
 
 <body class="back">
+    <?php include "navbar.php";?>
     <img src="css/img/b1.jpg" class="imagem" style="width: 800px;">
     <div class="login-form">
 
@@ -34,7 +36,7 @@ include'database.php';
 
             echo "<script>window.open('adminhome.php','_self');</script>";
            } else{
-            echo "<div class='error'>Nome Inválida ou Senha Inválida </div>";
+            echo "<div class='error'>Nome Inválido ou Senha Inválida </div>";
            }
         }
 

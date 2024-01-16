@@ -76,3 +76,36 @@ footer{
 footer p{
     padding-top: 60px;
 }
+
+.error{
+    background: rgb(235, 66, 43);
+    color: white;
+    line-height: 30px;
+    border-radius: 5px;
+    height: 30px;
+    text-align: center;
+    margin-bottom: 5px;
+    font-weight: bold;
+} 
+.side{
+    list-style: none;
+}
+.navbar{
+    background-color: #1971b1;
+    height: 60px;
+    width: 100%;
+}
+.list{
+    list-style: none;
+    float: right;
+}
+.list li{
+    display: inline;
+}
+.list li a{
+    font-family:Cooper black;
+    text-decoration: none;
+    color: white;
+    line-height: 50px;
+    padding:7px ;
+}
