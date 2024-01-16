@@ -14,7 +14,7 @@ session_start();
 </head>
 
 <body >
-    
+<?php include "navbar.php";?>
     <img src="css/img/1.jpg" class="sha">
     <div id="section">
         <?php include "sidebar.php"?>

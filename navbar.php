@@ -1,5 +1,5 @@
 <div class="navbar">
-    <ul class="list" style="color:white; float:left; line-height:50px;
+    <ul class="list" style="color:white; float:center; line-height:50px;
     margin-left:15px; font-family:Cooper black;">
     <b>Sistema de Gestão Escolar</b>
 
