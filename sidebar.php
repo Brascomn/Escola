@@ -10,8 +10,7 @@
         <li class="li"><a href="addstuff.php"> Informação do Elenco</a></li>
         <li class="li"><a href="viewstuff.php"> Informação Escolar</a></li>
         <li class="li"><a href="setexam.php"> Marcar Exame Escolar</a></li>
-        <li class="li"><a href="student.php"> Informação de Estudante</a></li>
-        <li class="li"><a href="logout.php"> Informação Escolar</a></li>
+        <li class="li"><a href="student.php"> Informação de Estudante</a></li
         
         ';
     } else{
