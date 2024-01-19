@@ -20,11 +20,11 @@ session_start();
         <?php include "sidebar.php"?>
         <div id="content">
             <h3 class="text">SEJA BEM-VINDO! <?php echo $_SESSION["ANAME"]; ?></h3></br><hr><br>
-            <h3>Add Subject Details</h3> <br>
+            <h3>VIEW STAFF DETAILS</h3> <br>
             <?php
 
             if (isset($_POST["submit"])) {
-                $sq ="insert into sub (SNAME) values ('{$_POST["sname"]}')";
+                $sq ="insert into staff (TNAME,QUL,SAL) values ('{$_POST["sname"]}','{$_POST["qname"]}','{$_POST["nname"]}')";
                if ($db->query($sq)) {
                 echo "<div class='sucess'> insert class sucess</div>";
             }else{
@@ -36,18 +36,19 @@ session_start();
 
             <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post">
             
-            <label for="">Subject Name</label> </br>
-            <input type="text" name="sname" required class="input2"> <br>
+            <!-- <label for="">STAFF NAME</label> -->
+         </br>
+            <input type="text" name="sname" required class="input2"> </br>
 
-             <button type="submit" class="btn" name="submit"> Add Subject Details </button>
+             <!-- <button type="submit" class="btn" name="submit"> ADD </button> -->
 
             </form>
         </div>
         <br>
         <div class="tbox">
-            <h3>SUBJECT Details</h3><br>
+        <!-- <h3>SUBJECT Details</h3><br> -->
             <table border="1px">
-                
+                 
                         <?php 
 
             if (isset($_GET["mes"])) {
@@ -56,12 +57,15 @@ session_start();
             }
 ?>
                 <tr>
-                    <th>S.No</th>
-                    <th>Subject Name</th>
+                <th>S.No</th>
+                    <th>Name</th>
+                    <th>Qualification</th>
+                    <th>Salary</th>
+                    <th>View</th>
                     <th>Delete</th>
                 </tr>
                 <?php
-                 $s="select *from sub ";
+                 $s="select *from staff ";
                  $res = $db->query($s);
                  if ($res->num_rows>0) {
 
@@ -72,13 +76,16 @@ session_start();
                         $i++;
                         echo "<tr> 
                         <td>${i}</td>
-                        <td>{$r["SNAME"]}</td>
-                        <td><a href='deletesub.php?id={$r["SIC"]}' class='btnr'> Delete</td>
+                        <td>{$r["TNAME"]}</td>
+                        <td>{$r["QUL"]}</td>
+                        <td>{$r["SAL"]}</td>
+                        <td><a href='deletesub.php?id={$r["TID"]}' class='btnr'> view</td>
+                        <td><a href='deletesub.php?id={$r["TID"]}' class='btnr'> Delete</td>
                      </tr>";
                     }
                     
                  }
-                 ?>
+                 ?> 
             </table>
             <br>
         </div>

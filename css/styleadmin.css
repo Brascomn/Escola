@@ -168,7 +168,7 @@ tr, th, td{
     border-collapse: collapse;
 }
 .sucess{
-    background: rgb(235, 66, 43);
+    background-color: rgb(38, 253, 38);
     color: white;
     line-height: 30px;
     border-radius: 5px;
@@ -178,12 +178,14 @@ tr, th, td{
     font-weight: bold;
 }
 .error{
-    background-color: rgb(38, 253, 38);
+    background: rgb(235, 66, 43);
     color: white;
-    line-height: 10px;
+    line-height: 30px;
     border-radius: 5px;
+    height: 30px;
     text-align: center;
-    margin-bottom: 13px;
+    margin-bottom: 5px;
+    font-weight: bold;
 } 
 .btnr{
     text-decoration: none;
@@ -198,7 +200,7 @@ tr, th, td{
     
     border-radius: 5px;
     padding: 5px;
-    background-color: #15a306;
+    background-color: #0c6192;
     color: white;
 
-}
+} 

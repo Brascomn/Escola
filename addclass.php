@@ -63,12 +63,20 @@ session_start();
                 
              </select> <br>
 
-             <button type="submit" class="btn" name="submit"> Add Class Details </button>
+             <button type="submit" class="btn" name="submit"> Add Class Details </button> 
 
             </form>
         </div>
         <div class="tbox">
-            <h3>Class Details</h3>
+            <br><h3>Class Details</h3> <br>
+
+            <?php 
+
+            if (isset($_GET["mes"])) {
+
+                echo "<div class='error'>{$_GET["mes"]}</div>";
+            }
+            ?>
             <table border="1px">
                 <tr>
                     <th>S.Nome</th>
@@ -97,6 +105,7 @@ session_start();
                  }
                  ?>
             </table>
+            <br>
         </div>
     </div>
 
